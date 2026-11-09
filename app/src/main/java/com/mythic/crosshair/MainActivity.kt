@@ -1,6 +1,6 @@
 package com.mythic.crosshair
 import android.Manifest
-import android.app.Activity
+import androidx.activity.ComponentActivity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import java.io.File
 
-class MainActivity : Activity() {
+class MainActivity : ComponentActivity() {
     private lateinit var prefs: Prefs
     private lateinit var preview: CrosshairView
     private val picker = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri: Uri? ->
